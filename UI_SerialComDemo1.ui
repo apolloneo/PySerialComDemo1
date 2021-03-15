@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>myMainWindow</class>
+ <widget class="QMainWindow" name="myMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Serial COM Demo 1</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_SerialPort">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>10</y>
+      <width>170</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Serial Port</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_SerialPort">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>130</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Connect</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_SerialPort">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>30</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Port: </string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_SerialPort">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>90</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_TRX">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>600</width>
+      <height>530</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Serial Communication TX/RX</string>
+    </property>
+    <widget class="QTextBrowser" name="textBrowser_TRX">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>580</width>
+       <height>430</height>
+      </rect>
+     </property>
+     <property name="acceptRichText">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_TRX_Send">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>490</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Send</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_TRX">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>490</y>
+       <width>420</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="maxLength">
+      <number>255</number>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_TRX_Clr">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>460</y>
+       <width>150</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear Recv Data</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_TRX_Clr_2">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>490</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Clear Tx</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuABout">
+    <property name="title">
+     <string>ABout</string>
+    </property>
+   </widget>
+   <addaction name="menuABout"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_TRX_Send</sender>
+   <signal>clicked()</signal>
+   <receiver>myMainWindow</receiver>
+   <slot>btnSendTxtClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>479</x>
+     <y>536</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>752</x>
+     <y>532</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_TRX_Clr</sender>
+   <signal>clicked()</signal>
+   <receiver>textBrowser_TRX</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>464</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>544</x>
+     <y>480</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_SerialPort</sender>
+   <signal>clicked()</signal>
+   <receiver>myMainWindow</receiver>
+   <slot>btnConnectClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>686</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>699</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_TRX_Clr_2</sender>
+   <signal>clicked()</signal>
+   <receiver>lineEdit_TRX</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>562</x>
+     <y>538</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnSendTxtClicked()</slot>
+  <slot>btnConnectClicked()</slot>
+ </slots>
+</ui>
