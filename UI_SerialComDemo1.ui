@@ -23,17 +23,17 @@
       <x>620</x>
       <y>10</y>
       <width>170</width>
-      <height>80</height>
+      <height>230</height>
      </rect>
     </property>
     <property name="title">
      <string>Serial Port</string>
     </property>
-    <widget class="QPushButton" name="pushButton_SerialPort">
+    <widget class="QPushButton" name="pushButton_SerialConnect">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>50</y>
+       <y>200</y>
        <width>130</width>
        <height>20</height>
       </rect>
@@ -47,7 +47,7 @@
       <rect>
        <x>20</x>
        <y>20</y>
-       <width>30</width>
+       <width>50</width>
        <height>20</height>
       </rect>
      </property>
@@ -58,11 +58,316 @@
     <widget class="QComboBox" name="comboBox_SerialPort">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>80</x>
        <y>20</y>
-       <width>90</width>
+       <width>70</width>
        <height>20</height>
       </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Baudrate">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>50</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Baud:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Baudrate">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>50</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>5</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>600</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1200</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1800</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2400</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>4800</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>9600</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>19200</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>38400</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>57600</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>115200</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>230400</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>460800</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>500000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>576000</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>921600</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_Databits">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>80</y>
+       <width>50</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Data bits:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Stopbits">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>50</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Stop bits:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Parity">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>140</y>
+       <width>50</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Parity:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Timeout">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>50</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Timeout:</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Parity">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>140</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>None</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Odd</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Even</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Mark</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Space</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Databits">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>80</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="comboBox_Stopbits">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>110</y>
+       <width>70</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="currentText">
+      <string extracomment="0">1</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1.5</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_Timeout">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>170</y>
+       <width>50</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::NoContextMenu</enum>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="inputMask">
+      <string/>
+     </property>
+     <property name="text">
+      <string>1000</string>
+     </property>
+     <property name="maxLength">
+      <number>5</number>
+     </property>
+     <property name="cursorPosition">
+      <number>4</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string notr="true"/>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_Timeout_2">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>170</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string> ms</string>
      </property>
     </widget>
    </widget>
@@ -165,6 +470,20 @@
    <addaction name="menuABout"/>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>comboBox_SerialPort</tabstop>
+  <tabstop>comboBox_Baudrate</tabstop>
+  <tabstop>comboBox_Databits</tabstop>
+  <tabstop>comboBox_Stopbits</tabstop>
+  <tabstop>comboBox_Parity</tabstop>
+  <tabstop>lineEdit_Timeout</tabstop>
+  <tabstop>pushButton_SerialConnect</tabstop>
+  <tabstop>lineEdit_TRX</tabstop>
+  <tabstop>pushButton_TRX_Send</tabstop>
+  <tabstop>pushButton_TRX_Clr_2</tabstop>
+  <tabstop>pushButton_TRX_Clr</tabstop>
+  <tabstop>textBrowser_TRX</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>
@@ -178,8 +497,8 @@
      <y>536</y>
     </hint>
     <hint type="destinationlabel">
-     <x>752</x>
-     <y>532</y>
+     <x>736</x>
+     <y>573</y>
     </hint>
    </hints>
   </connection>
@@ -200,18 +519,18 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_SerialPort</sender>
+   <sender>pushButton_SerialConnect</sender>
    <signal>clicked()</signal>
    <receiver>myMainWindow</receiver>
    <slot>btnConnectClicked()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>686</x>
-     <y>94</y>
+     <x>764</x>
+     <y>250</y>
     </hint>
     <hint type="destinationlabel">
-     <x>699</x>
-     <y>121</y>
+     <x>743</x>
+     <y>268</y>
     </hint>
    </hints>
   </connection>
@@ -231,9 +550,90 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>comboBox_Baudrate</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>myMainWindow</receiver>
+   <slot>updateSerialParam()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>749</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>742</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_Databits</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>myMainWindow</receiver>
+   <slot>updateSerialParam()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>766</x>
+     <y>121</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>744</x>
+     <y>345</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_Stopbits</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>myMainWindow</receiver>
+   <slot>updateSerialParam()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>758</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>742</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox_Parity</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>myMainWindow</receiver>
+   <slot>updateSerialParam()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>764</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>744</x>
+     <y>400</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit_Timeout</sender>
+   <signal>editingFinished()</signal>
+   <receiver>myMainWindow</receiver>
+   <slot>updateSerialParam()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>737</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>736</x>
+     <y>436</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>btnSendTxtClicked()</slot>
   <slot>btnConnectClicked()</slot>
+  <slot>updateSerialParam()</slot>
  </slots>
 </ui>
